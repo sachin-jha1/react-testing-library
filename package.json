@@ -9,6 +9,7 @@
     "node": ">=14"
   },
   "scripts": {
+    "prepare": "npm run build",
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel build:main build:bundle:main build:bundle:pure",
     "build:bundle:main": "dotenv -e .bundle.main.env kcd-scripts build -- --bundle --no-clean",
